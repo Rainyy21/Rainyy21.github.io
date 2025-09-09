@@ -1,0 +1,40 @@
+/* color for normal and darkmode */
+:root{
+    --primary-background-color: #ECEEDF;
+    --ground-footer-color: #CFAB8D;
+    --second-footer-color: #D9C4B0;
+    --secondary-background-color: #BBDCE5;
+
+}
+
+.dark{
+    --primary-background-color: #78B9B5;
+    --ground-footer-color: #320A6B;
+    --second-footer-color: #065084;
+    --secondary-background-color: #0F828C;
+}
+
+/* the darkmode button */
+#theme_switch{
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    cursor: pointer;
+}
+#theme_switch svg{
+    width: 3.5rem;
+    height: auto;
+    fill:var(--secondary-background-color);
+    
+}
+
+#theme_switch svg:last-child{
+    display: none;
+}
+
+.dark #theme_switch svg:first-child{
+    display: none;
+}
