@@ -1,0 +1,15 @@
+#about .description{
+    font-family: monospace;
+    font-size: 1.5rems;
+    font-weight: normal;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    height: 100rem;
+    width: 40rem;
+}
+
+#about .tittle_text{
+    padding-bottom: 2rem;
+}

@@ -1,11 +1,30 @@
-# this project will be a resume of my website
+# My Personal Website
 
-## made a template on where everything should be
+This document outlines what I'm currently working on and what my plans are.
 
-## commit a a change by adding color variable and dark mode button, need to finish the darkmode buton
+---
 
-I have finish my darkmode button
+## Goal
 
-## main content box and what the design sould be 
-I have added the main context
-i have added the Welcome and what I am
+- Improve the link buttons by styling and adding color
+- Set up navigation to other pages
+- Plan the layout for those additional pages
+
+---
+
+## Done
+
+- Completed dark and light mode toggle
+- Finalized color scheme with variables
+- Built main content box to hold info
+- Created template layout
+- Added welcome text and introduction
+
+---
+
+## Notes
+
+- I committed a change to add color variables and the dark mode button.
+- The dark mode button is working.
+- The structure and main content have been added.
+
