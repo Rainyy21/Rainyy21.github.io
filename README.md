@@ -1,13 +1,30 @@
-# My personal website
-this is the document what I'm currently doing and what my plan is going to be 
+# My Personal Website
 
+This document outlines what I'm currently working on and what my plans are.
 
-# goal
-I need to finish the link button by making them better and adding color to them
+---
 
-after button think of how to send link to different page and what the layout of those page 
+## Goal
 
-# Done
-competed the dark and light mode button
-complete color scheme
-complete main box to hold info 
+- Improve the link buttons by styling and adding color
+- Set up navigation to other pages
+- Plan the layout for those additional pages
+
+---
+
+## Done
+
+- Completed dark and light mode toggle
+- Finalized color scheme with variables
+- Built main content box to hold info
+- Created template layout
+- Added welcome text and introduction
+
+---
+
+## Notes
+
+- I committed a change to add color variables and the dark mode button.
+- The dark mode button is working.
+- The structure and main content have been added.
+
