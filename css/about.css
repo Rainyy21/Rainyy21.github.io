@@ -1,4 +1,5 @@
-#about .description{
+/* text box and make it so it doesn't overflow out of the box */
+#about.description{
     font-family: monospace;
     font-size: 1.5rems;
     font-weight: normal;
@@ -10,6 +11,25 @@
     width: 40rem;
 }
 
-#about .tittle_text{
-    padding-bottom: 2rem;
+/* tittle (contain name, and simple text with icon)  */
+#about.tittle_text{
+    padding-bottom: 0rem;
+}
+#about.tittle_text h1{
+    font-size: 2.5rem;
+}
+
+/* education section */
+#textbox.brooklyncollege{
+   border-left: 3px solid rgba(17, 17, 17, 0.5);
+}
+
+#education.brooklyncollege{
+    padding-left: 4px;
+    font-size: .9rem;
+}
+
+/* hobbie section */
+#bulletpoint.hobbie{
+    font-size:1.2rem;
 }
