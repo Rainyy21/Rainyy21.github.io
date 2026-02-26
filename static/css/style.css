@@ -32,6 +32,7 @@ body {
 .card {
   transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -39,32 +40,54 @@ body {
   box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
+#modalTitle {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.status-btn {
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    color: var(--muted);
+    transition: all 0.2s;
+}
+
+.status-btn:hover {
+    background: #f8f9fa;
+    border-color: #ccc;
+    color: var(--ink);
+}
+
 .delete_button {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.2s, background 0.2s;
-  font-size: 14px;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+  font-size: 16px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .card:hover .delete_button {
   opacity: 1;
+  background:var(--rust);
 }
 
-.delete_button:hover {
-  background: var(--rust);
-  color: white;
-}
+
 #side_bar{
   background-color:var(--ink);
   display:flex;
@@ -112,13 +135,14 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(200,130,42,0.35);
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 /*search_bar*/
 #search_bar{
-  margin-top: 20px;
-  width: 100%;
-  margin:5px;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 30px;
 }
 
 #mediaSearch {

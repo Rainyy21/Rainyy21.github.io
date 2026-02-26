@@ -19,27 +19,46 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded',() => {
- const searchBar = document.getElementById('mediaSearch');
-  
-  if(searchBar){
-    searchBar.addEventListener('keyup', ()=>{
-      const input = searchBar.value.toLowerCase();
-      const cards = document.getElementsByClassName('card');
-
-      for (let i = 0; i < cards.length; i++) {
-        // We search all text inside the card (Title, Author, Genre)
-        const cardText = cards[i].innerText.toLowerCase();
-                
-        if (cardText.includes(input)) {
-          cards[i].style.display = "";
-        } 
-        else {
-          cards[i].style.display = "none";
-        }
-      }
-    });
-  }
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBar = document.getElementById('mediaSearch');
     
+    if (searchBar) {
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.grid .card');
+            let hasVisibleCards = false;
+
+            cards.forEach(card => {
+                // Search specifically in h3 (title), p (author), and genre-list
+                const title = card.querySelector('h3')?.innerText.toLowerCase() || "";
+                const details = card.querySelector('.content')?.innerText.toLowerCase() || "";
+                const combinedText = `${title} ${details}`;
+
+                if (combinedText.includes(query)) {
+                    card.style.display = "block";
+                    hasVisibleCards = true;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // Optional: Handle "No results found" message
+            const container = document.getElementById('book-container');
+            let noResults = document.getElementById('no-results-msg');
+            
+            if (!hasVisibleCards && query !== "") {
+                if (!noResults) {
+                    noResults = document.createElement('p');
+                    noResults.id = 'no-results-msg';
+                    noResults.innerText = "No matches found... 🔍";
+                    noResults.style.padding = "20px";
+                    noResults.style.color = "var(--muted)";
+                    container.parentNode.appendChild(noResults);
+                }
+            } else if (noResults) {
+                noResults.remove();
+            }
+        });
+    }
 });
 

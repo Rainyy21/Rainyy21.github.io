@@ -11,6 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/card.css">
+    <link rel="stylesheet" href="/static/css/form.css">
 
     <!-- JS -->
     <script src="/static/js/main.js" defer></script>
@@ -41,8 +42,9 @@
               
             <!--the form-->
             <dialog id="formModal">
-            
+              <h2 id="modalTitle">Log a book/show</h2>
               <form id="addMediaForm">
+                <input type="hidden" id="editIndex" value="-1">
                 <input type="text" id="title" name="title" placeholder="Title" required>
                 <select id="type" name="type">
                   <option value="Book">Book</option>
@@ -50,7 +52,13 @@
                  </select>
                 <input type="number" id="year" name="year" placeholder="Year">
                 <input type="text" id="extra_info" name="extra_info" placeholder="Author/Network">
-                <select id="genre" name="genre">                  <option value="Fiction">Fiction</option>
+                <select id="status" name="status">
+                  <option value="Unread">Unread</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Completed">Completed</option>
+                </select>
+                <select id="genre" name="genre">
+                  <option value="Fiction">Fiction</option>
                   <option value="Non-Fiction">Non-Fiction</option>
                   <option value="Mystery & Thriller">Mystery & Thriller</option>
                   <option value="Sci-Fi & Fantasy">Sci-Fi & Fantasy</option>
