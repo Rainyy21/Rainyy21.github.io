@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 :root {
     --ink: #1a1409;
     --cream: #f5f0e8;
@@ -13,9 +21,49 @@
   }
 
 #body_page{
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: row !important;
   background-color:var(--cream);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.delete_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+  font-size: 14px;
+}
+
+.card:hover .delete_button {
+  opacity: 1;
+}
+
+.delete_button:hover {
+  background: var(--rust);
+  color: white;
 }
 #side_bar{
   background-color:var(--ink);
@@ -23,7 +71,17 @@
   flex-direction: column;
   justify-content:center;
   height: 100vh;
-  width: 30vw;
+  width: 25vw;
+  color: white;
+  padding: 2rem;
+}
+#homepage {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+}
+#side_bar, #side_bar h1, #side_bar a {
+  color: white !important;
 }
 #menu{
   list-style-type:none;
@@ -32,15 +90,26 @@
 }
 #menu-button{
   text-decoration:none;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+#menu-button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+#menu li {
+  margin-bottom: 10px;
 }
 
 #home_nav{
   display:flex;
   flex-direction:row;
-  justify-content:space-around;
-  align-content:center;
-  width:80vw;
-  padding:20px;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
 }
 /*button*/
 #button{
@@ -63,6 +132,7 @@
 #search_bar{
   margin-top: 20px;
   width: 100%;
+  margin:5px;
 }
 
 #mediaSearch {
