@@ -1,0 +1,80 @@
+:root {
+    --ink: #1a1409;
+    --cream: #f5f0e8;
+    --parchment: #ede8dc;
+    --amber: #c8822a;
+    --amber-light: #e8a84a;
+    --sage: #7a8c6e;
+    --rust: #a84832;
+    --muted: #7a7060;
+    --card-bg: #faf7f2;
+    --book-color: #a84832;
+    --show-color: #7a8c6e;
+  }
+
+#body_page{
+  display: flex;
+  flex-direction: row;
+  background-color:var(--cream);
+}
+#side_bar{
+  background-color:var(--ink);
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  height: 100vh;
+  width: 30vw;
+}
+#menu{
+  list-style-type:none;
+  padding: 0;
+
+}
+#menu-button{
+  text-decoration:none;
+}
+
+#home_nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-content:center;
+  width:80vw;
+  padding:20px;
+}
+/*button*/
+#button{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background-color:var(--amber);
+  color:white;
+  border:none;
+  border-radius:40px;
+  padding:12px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200,130,42,0.35);
+  transition: all 0.2s;
+}
+
+/*search_bar*/
+#search_bar{
+  margin-top: 20px;
+  width: 100%;
+}
+
+#mediaSearch {
+  width:100%;
+  padding: 15px;
+  font-size:1rem;
+  border: 2px solid #eee;
+  border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+#mediaSearch:focus {
+    border-color: var(--show-color); /* Changes color when you click it */
+}
