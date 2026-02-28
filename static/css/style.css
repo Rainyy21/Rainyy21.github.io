@@ -87,6 +87,11 @@ body {
   background:var(--rust);
 }
 
+@media (min-width: 769px){
+  #side_bar{
+    display: none;
+  }
+}
 
 #side_bar{
   background-color:var(--ink);
@@ -98,6 +103,7 @@ body {
   color: white;
   padding: 2rem;
 }
+
 #homepage {
   flex: 1;
   height: 100vh;
