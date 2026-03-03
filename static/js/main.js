@@ -65,11 +65,37 @@ document.addEventListener('DOMContentLoaded', () => {
 // add the button to make the search bar appear
 document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('mobile-search-button');
-    const searchBar = document.getElementById('mediaSearch');
-
-    if (searchBtn && searchBar) {
-        searchBtn.addEventListener('click', () => {
-            searchBar.classList.toggle('hidden');
-        });
+    const searchBar = document.getElementById('search_bar');
+    const closeBtn = document.querySelector('.close-btn');
+    const searchInput = document.getElementById('mediaSearch');
+    
+    function openSearchBar() {
+        searchBar.classList.add('show');
+        searchBtn.style.display = 'none';
+        searchInput.focus();
     }
+
+    function closeSearchBar() {
+        searchBar.classList.remove('show');
+        searchBtn.style.display = 'block';
+    }
+
+    searchBtn.addEventListener('click', openSearchBar);
+    closeBtn.addEventListener('click', closeSearchBar);
+
+    // Close if user taps outside
+    document.addEventListener('click', (e) => {
+        if (!searchBar.contains(e.target) && !searchBtn.contains(e.target)) {
+            closeSearch();
+        }
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeSearch();
+        }
+    });
+
+    
 });

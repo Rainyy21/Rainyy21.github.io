@@ -71,7 +71,7 @@ body {
     padding: 15px;
     height: auto;
   }
-
+  
   #search_bar {
     width: 100%;
     max-width: none;
@@ -79,18 +79,7 @@ body {
     order: 2; /* Put search bar in the middle */
   }
 
-  .mobile-only {
-    order: 1; /* Title at the top */
-    margin: 0;
-    font-size: 1.5rem;
-  }
 
-  #button {
-    order: 3; /* Button at the bottom */
-    width: 100%;
-    justify-content: center;
-    font-size: 6px;
-  }
 }
 
 #side_bar{
