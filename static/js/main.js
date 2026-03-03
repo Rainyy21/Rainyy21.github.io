@@ -62,3 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// add the button to make the search bar appear
+document.addEventListener('DOMContentLoaded', () => {
+    const searchBtn = document.getElementById('mobile-search-button');
+    const searchBar = document.getElementById('mediaSearch');
+
+    if (searchBtn && searchBar) {
+        searchBtn.addEventListener('click', () => {
+            searchBar.classList.toggle('hidden');
+        });
+    }
+});
