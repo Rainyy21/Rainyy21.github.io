@@ -11,6 +11,15 @@
   overflow: hidden; 
   box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   margin: 5px;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
 .content { 
@@ -25,6 +34,33 @@
   font-weight: bold; 
 }
 
+/* the delete button */
+.delete_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+  font-size: 16px;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card:hover .delete_button {
+  opacity: 1;
+  background:var(--rust);
+}
+
+/* the badge color */
 .book-badge { 
   background: var(--book-color); 
 }
@@ -33,27 +69,10 @@
   background: var(--show-color); 
 }
 
+
 .genre-list { 
   display: block; 
   color: #888; 
   font-size: 0.8rem; 
   margin: 5px 0; 
-}
-
-dialog{
-  border:none;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-dialog::backdrop {
-  background: rgba(0,0,0,0.5);
-}
-
-form  {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }

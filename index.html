@@ -28,11 +28,19 @@
       
       <div id="homepage">
         <div id="home_nav">
+          <!-- this is desktop only -->
           <h1 class="desktop-only">Good evening</h1>
-          <h1 class="mobile-only" style= "font-size:16px;">Book/Movie log</h1>
-          <div id="search_bar">
+          <div id="search_bar" class="desktop-only">
             <input type="text" id="mediaSearch" placeholder="🔍 Search by title, author, network, or genre...">
           </div>
+          <!-- this is mobile only -->
+          <h1 class="mobile-only" style= "font-size:16px;">Book/Movie log</h1>
+          <div id="button" class="mobile-search-button">🔍</div>
+          <div id="search_bar" class="mobile-only">
+            <input type="text" id="mediaSearch" placeholder="🔍 Search by title, author, network, or genre...">
+          </div>
+
+          <!-- this button is for both -->
           <div id="button" class="open-form-btn">+ log a book/show</div>
         </div>
           

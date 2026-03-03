@@ -29,16 +29,6 @@ body {
   overflow: hidden;
 }
 
-.card {
-  transition: transform 0.2s, box-shadow 0.2s;
-  position: relative;
-  cursor: pointer;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-}
 
 #modalTitle {
   margin-bottom: 20px;
@@ -62,30 +52,6 @@ body {
     color: var(--ink);
 }
 
-.delete_button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255,255,255,0.9);
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.2s, background 0.2s, color 0.2s;
-  font-size: 16px;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.card:hover .delete_button {
-  opacity: 1;
-  background:var(--rust);
-}
 
 /* Responsive visibility */
 @media (min-width: 769px) {
@@ -149,6 +115,7 @@ body {
   height: 100vh;
   overflow-y: auto;
 }
+
 #side_bar, #side_bar h1{
   color: white;
 }
@@ -166,6 +133,7 @@ body {
   align-items:center;
   padding:20px 40px;
 }
+
 /*button*/
 #button{
   display:flex;
