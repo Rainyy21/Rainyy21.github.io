@@ -64,24 +64,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // add the button to make the search bar appear
 document.addEventListener('DOMContentLoaded', () => {
-    const searchBtn = document.getElementById('mobile-search-button');
-    const searchBar = document.getElementById('search_bar');
-    const closeBtn = document.querySelector('.close-btn');
-    const searchInput = document.getElementById('mediaSearch');
+    const openBtn = document.getElementById("mobileSearchOpen");
+    const closeBtn = document.getElementById("mobileSearchClose");
+    const searchBar = document.getElementById("mobileSearchBar");
+
     
-    function openSearchBar() {
-        searchBar.classList.add('show');
-        searchBtn.style.display = 'none';
-        searchInput.focus();
-    }
+    openBtn.addEventListener("click", () => {
+        searchBar.style.display = "block";
+    });
 
-    function closeSearchBar() {
-        searchBar.classList.remove('show');
-        searchBtn.style.display = 'block';
-    }
+    closeBtn.addEventListener("click", () => {
+        searchBar.style.display = "none";
+    });
 
-    searchBtn.addEventListener('click', openSearchBar);
-    closeBtn.addEventListener('click', closeSearchBar);
 
     // Close if user taps outside
     document.addEventListener('click', (e) => {
@@ -96,6 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
             closeSearch();
         }
     });
-
     
 });

@@ -63,8 +63,10 @@ body {
     display: none !important;
   }
 
+
 }
 
+/* mobile  */
 @media (max-width: 768px) {
   .desktop-only {
     display: none;
@@ -81,7 +83,28 @@ body {
     width: 100%;
     max-width: none;
     margin: 0;
-    order: 2; /* Put search bar in the middle */
+  }
+  /* search bar on mobile */
+  #mobileSearchBar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 20px;
+    z-index: 9999;
+    display: none;
+  }
+
+  #mobileMediaSearch{
+    width:100%;
+    padding: 15px;
+    font-size:1rem;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    flex-direction: column;
   }
 
 
@@ -159,9 +182,9 @@ body {
   font-size:1rem;
   border: 2px solid #eee;
   border-radius: 10px;
-    outline: none;
-    transition: border-color 0.3s;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 #mediaSearch:focus {
     border-color: var(--show-color); /* Changes color when you click it */
