@@ -19,16 +19,3 @@ To get this project running on your computer, follow these steps:
 
     Open the site:
     Simply double-click index.html or use the "Live Server" extension in VS Code.
-
-📁 File Structure
-Plaintext
-
-├── index.html       # Main entry point
-├── static/         
-    ├── css/
-        └── style.css    # All styling
-        └── card.css     # Card styling
-        └── form.css     # Form styling
-    └── js/
-        └── main.js      # Pop-up logic and interactivity
-        └── card.js      # Adding card template to html and add it to local storage with json
