@@ -4,6 +4,7 @@ dialog{
   padding: 20px;
   width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: var(--parchment);
 }
 
 dialog::backdrop {
@@ -14,5 +15,23 @@ form  {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: var(--parchment);
+}
+
+#closeFormBtn{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background-color:var(--amber);
+  color:white;
+  border:none;
+  border-radius:40px;
+  padding:12px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(200,130,42,0.35);
+  transition: all 0.2s;
+  white-space: nowrap;
 }
 
